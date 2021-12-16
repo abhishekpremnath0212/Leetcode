@@ -1,29 +1,20 @@
-
-
-class Solution(object):
-    def removeNthFromEnd(self, head, n):
-        # get list length
-        curr = head
-        length = 0
-        while curr:
-            curr = curr.next
-            length += 1
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
         
-        # calculate target (from start)
-        target = length - n + 1
+        dummy=ListNode(0,head)
+        curr=dummy
+        prev=curr
+        while n>0:
+            curr=curr.next
+            n-=1
+        while curr and curr.next:
+            curr=curr.next
+            prev=prev.next
+        prev.next=prev.next.next
+        return dummy.next
         
-        # account for edge case: remove first node
-        if target == 1:
-            return head.next
-        
-        # remove target node
-        length = 0
-        curr = head
-        while curr:
-            length += 1
-            if length == target:
-                prev.next = curr.next
-                
-            prev, curr = curr, curr.next
-            
-        return head
