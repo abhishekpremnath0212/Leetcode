@@ -1,3 +1,4 @@
+[Discussion Post (created on 21/11/2021 at 15:40)](https://leetcode.com/problems/invert-binary-tree/discuss/1640376/Python-simple-recursive-solution)  
 <h2>226. Invert Binary Tree</h2><h3>Easy</h3><hr><div><p>Given the <code>root</code> of a binary tree, invert the tree, and return <em>its root</em>.</p>
 
 <p>&nbsp;</p>
