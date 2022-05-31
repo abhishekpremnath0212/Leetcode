@@ -13,6 +13,6 @@ class Solution:
                 right = middle - 1
                 last = 0
         if last == 0:
-            return middle
+            return left
         else:
-            return middle + 1
+            return left
