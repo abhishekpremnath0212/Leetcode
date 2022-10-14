@@ -8,7 +8,7 @@ class Solution:
             # print(area)
             # break
             ans=max(area,ans)
-            if height[l]<=height[r]:
+            if height[l]<height[r]:
                 l+=1
             else:
                 r-=1
